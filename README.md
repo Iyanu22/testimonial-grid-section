@@ -27,26 +27,15 @@ Users should be able to:
 
 ### Progress
 
-This solution is a work in progress.
-
-- [x] HTML structure for all five testimonial cards
-- [x] SCSS colour palette set up as variables
-- [x] Mobile layout: single column of cards using Flexbox
-- [ ] Heading and description spacing matched to the design
-- [ ] Barlow Semi Condensed font loaded and typography matched
-- [ ] Card colours and text opacity matched to the design
-- [ ] Desktop layout using CSS Grid
-- [ ] Accessibility clean-up (heading hierarchy, alt text)
-- [ ] Decorative quote mark on the purple card (desktop)
-
+So far, I've built the HTML structure for all five testimonial cards and set up the colour palette as SCSS variables, and the mobile layout is done as a single column of cards using Flexbox. Next, I matched the heading spacing, font and card colours to the design, and then built the desktop layout with CSS Grid. 
 ### Screenshot
 
 ![](./design/testimonial_section(2).png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Iyanu22/testimonial-grid-section.git]
+- Live Site URL: [https://iyanu22.github.io/testimonial-grid-section/]
 
 ## My process
 
@@ -57,7 +46,7 @@ This solution is a work in progress.
 - Flexbox (mobile layout)
 - CSS Grid with `grid-template-areas` (desktop layout)
 - Mobile-first workflow
-- [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) via Google Fonts
+
 
 ### What I learned
 
@@ -106,14 +95,10 @@ White text with `opacity: 0.5` or `0.7` gives the softer secondary text from the
 
 1. **Heading margin not applying.** Root cause: no rule targeted the heading or description, combined with the universal reset.
 2. **A dead SCSS rule.** The nested `.details` selector didn't match my HTML structure, so it silently did nothing.
-3. **Wrong font.** The serif text in my first screenshot was the browser default, because the design's font wasn't loaded.
-4. **Colour mismatches.** I used `$grey-400` for the second card where the design uses the darker `$grey-500`, and I had the same colour on both the heading and description of the white cards.
-5. **Understanding the desktop grid.** I had never used `grid-template-areas`, so I had to learn the mental model first: an invisible table, with cards assigned to cells.
-6. **Markup issues found in review.** An unclosed `.container` div, five `<h1>` elements on one page, and a copy-pasted `alt` attribute on one avatar.
+3. **Understanding the desktop grid.** I was not too fsmiliar using `grid-template-areas`, so I had to learn the mental model first: an invisible table, with cards assigned to cells.
 
 ### Continued development
 
-- Use one `<h1>` per page and make the testimonial headings `<h2>`.
 - Rename `.first-column`, `.second-column` etc. to names that describe what the element is (for example `.card--purple`), since their position changes between mobile and desktop.
 - Get into the habit of checking the Styles panel in devtools first when a rule "doesn't work", instead of rewriting CSS and hoping.
 - Add the decorative quote mark on the purple card at desktop width.
@@ -129,5 +114,5 @@ I used Claude (in the web chat) as a debugging partner and tutor.
 
 ## Author
 
-- Website - [https://your-live-site-url.com]
+- Website - [https://iyanu22.github.io/testimonial-grid-section/]
 - Frontend Mentor - [@Iyanu22](https://www.frontendmentor.io/profile/Iyanu22)

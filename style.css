@@ -17,17 +17,6 @@ body {
   gap: 1.5rem;
   max-width: 24rem;
 }
-.container .author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.container .author img {
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-}
 .container .first-column, .container .second-column, .container .third-column, .container .fourth-column, .container .fifth-column {
   border-radius: 10px;
   box-shadow: 0 2rem 3rem -1rem hsla(0, 0%, 0%, 0.15);
@@ -74,6 +63,17 @@ body {
 }
 .container .details .description {
   line-height: 1.5;
+}
+.container .details .author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.container .details .author img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 .container .first-column img, .container .fourth-column img {
   border: 2px solid hsl(264, 82%, 80%);
