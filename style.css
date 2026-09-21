@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(214, 17%, 92%);
+  padding: 4rem 1.5rem 2rem;
+  font-size: 0.8125rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  gap: 1.5rem;
+  max-width: 24rem;
+}
+.container .author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.container .author img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.container .first-column, .container .second-column, .container .third-column, .container .fourth-column, .container .fifth-column {
+  border-radius: 10px;
+  box-shadow: 0 2rem 3rem -1rem hsla(0, 0%, 0%, 0.15);
+}
+.container .first-column, .container .second-column, .container .fourth-column {
+  color: white;
+}
+.container .first-column .author-title, .container .second-column .author-title, .container .fourth-column .author-title {
+  opacity: 0.5;
+}
+.container .first-column .description, .container .second-column .description, .container .fourth-column .description {
+  opacity: 0.7;
+}
+.container .third-column, .container .fifth-column {
+  color: hsl(217, 19%, 35%);
+}
+.container .third-column .author-title, .container .third-column .description, .container .fifth-column .author-title, .container .fifth-column .description {
+  color: hsl(224, 10%, 45%);
+}
+.container .first-column {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+.container .second-column {
+  background-color: hsl(224, 10%, 45%);
+}
+.container .third-column, .container .fifth-column {
+  background-color: hsl(0, 0%, 100%);
+}
+.container .fourth-column {
+  background-color: hsl(219, 29%, 14%);
+}
+.container .details {
+  padding: 2rem;
+}
+.container .details p {
+  font-size: 1rem;
+}
+.container .details h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.container .details .description {
+  line-height: 1.5;
+}
+.container .first-column img, .container .fourth-column img {
+  border: 2px solid hsl(264, 82%, 80%);
+}
+
+@media (min-width: 48rem) {
+  body {
+    padding-top: 8rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "first first second fifth" "third fourth fourth fifth";
+    gap: 2rem;
+    max-width: 70rem;
+  }
+  .first-column {
+    grid-area: first;
+  }
+  .second-column {
+    grid-area: second;
+  }
+  .third-column {
+    grid-area: third;
+  }
+  .fourth-column {
+    grid-area: fourth;
+  }
+  .fifth-column {
+    grid-area: fifth;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

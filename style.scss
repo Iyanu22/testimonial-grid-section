@@ -1,0 +1,123 @@
+//Primary Colors
+$purple-50: hsl(260, 100%, 95%);
+$purple-300: hsl(264, 82%, 80%);
+$purple-500: hsl(263, 55%, 52%);
+//Neutral colors
+$white: hsl(0, 0%, 100%);
+$grey-100: hsl(214, 17%, 92%);
+$grey-200: hsl(0, 0%, 81%);
+$grey-400: hsl(224, 10%, 45%);
+$grey-500: hsl(217, 19%, 35%);
+$dark-blue: hsl(219, 29%, 14%);
+$black: hsl(0, 0%, 7%);
+
+$breakpoint-desktop: 48rem;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: $grey-100;
+      padding: 4rem 1.5rem 2rem; 
+      font-size: 0.8125rem; // 13px
+
+}
+.container{
+display: flex;
+flex-direction: column;
+margin-inline: auto;
+gap: 1.5rem;
+max-width: 24rem;
+
+.author{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    img{
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+   
+
+
+}
+.first-column, .second-column, .third-column, .fourth-column, .fifth-column{
+    border-radius: 10px;
+    box-shadow: 0 2rem 3rem -1rem hsla(0, 0%, 0%, 0.15);
+   
+}
+//colored cards
+.first-column, .second-column, .fourth-column {
+    color: white;
+    .author-title{
+        opacity: 0.5;
+    }
+    .description{
+        opacity: 0.7;
+    }
+}
+
+//light cards
+.third-column, .fifth-column{
+    color: $grey-500;
+     .author-title, .description { color: $grey-400; }
+}
+.first-column{
+    background-color: $purple-500;
+    color: $white;
+    
+}
+
+.second-column{
+    background-color: $grey-400;
+}
+.third-column, .fifth-column{
+    background-color: $white;
+
+}
+.fourth-column{
+    background-color: $dark-blue;
+}
+.details{
+    padding: 2rem;
+    
+    p{
+        font-size: 1rem;
+    }
+    h2{
+       font-size:  1.25rem;
+       font-weight: 600;
+       line-height: 1.2;
+       margin-bottom: 1rem;
+    }
+    .description{
+        line-height: 1.5;
+    }
+}
+ .first-column img, .fourth-column img{
+        border: 2px solid $purple-300;
+    }
+}
+@media (min-width: $breakpoint-desktop){
+    body{
+        padding-top: 8rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "first first second fifth"
+        "third fourth fourth fifth";
+        gap: 2rem;
+        max-width: 70rem;
+
+    }
+    .first-column{grid-area: first;}
+    .second-column{grid-area: second;}
+    .third-column{grid-area: third;}
+    .fourth-column{grid-area: fourth;}
+    .fifth-column{grid-area: fifth;}
+}
